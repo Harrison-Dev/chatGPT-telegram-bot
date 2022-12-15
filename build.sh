@@ -8,4 +8,4 @@ echo "start build";
 # conda activate chat; 
 playwright install; 
 playwright install-deps; 
-python3 server.py
+# python3 server.py
