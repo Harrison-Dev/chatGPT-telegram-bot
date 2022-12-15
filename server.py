@@ -303,5 +303,14 @@ def start_browser():
     # Run the bot until the user presses Ctrl-C
     application.run_polling()
 
+def run_command(cmd):
+    output = subprocess.run(cmd, shell=True, capture_output=True)
+    print(output.stdout)
+    
 if __name__ == "__main__":
+    run_command("conda env create -f environment.yml")
+    run_command("conda activate chat")
+    run_command("playwright install")
+    run_command("playwright install-deps")
+    
     start_browser()
