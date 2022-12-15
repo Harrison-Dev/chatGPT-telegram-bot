@@ -308,9 +308,4 @@ def run_command(cmd):
     print(output.stdout)
     
 if __name__ == "__main__":
-    run_command("conda env create -f environment.yml")
-    run_command("conda activate chat")
-    run_command("playwright install")
-    run_command("playwright install-deps")
-    
     start_browser()
